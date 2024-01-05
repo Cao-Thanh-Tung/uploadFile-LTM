@@ -20,7 +20,6 @@ int main(int argc, char *argv[])
     connectServer(client_sock, argv[1], port);
 
     long long fileSize = inputFile(filePath, sizeof(filePath));
-    printf("%s\n", filePath);
     int status = receiveMessage(client_sock);
     if (status == 100)
     {

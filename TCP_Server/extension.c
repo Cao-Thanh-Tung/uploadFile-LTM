@@ -62,7 +62,7 @@ void openDirectory(char *path)
  */
 void writeLog(char *clientIP, int clientPort, char *command, char *statusContent)
 {
-    FILE *file = fopen("log_20200569.txt", "a+"); // "wb" để mở tập tin để ghi dữ liệu nhị phân
+    FILE *file = fopen("log_20200569.txt", "a+");
     if (file == NULL)
     {
         perror("Can not open file!");

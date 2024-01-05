@@ -147,14 +147,9 @@ void analize(int conn_sock, char *folderName)
     while (1)
     {
         ret = recv(conn_sock, recv_data, BUFF_SIZE, 0); // blocking
-        if (ret == 0)
+        if (ret <= 0)
         {
             printf("%s:%d disconnect to server\n", clientIP, clientPort);
-            break;
-        }
-        else if (ret < 0)
-        {
-            printf("Error revc() in\n");
             break;
         }
         else
